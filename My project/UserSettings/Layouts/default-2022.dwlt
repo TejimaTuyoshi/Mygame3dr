@@ -194,7 +194,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 58
+  controlID: 48
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -711,9 +711,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 722.9184, y: -2687.8384, z: 1748.2617}
+    m_Target: {x: 2906.566, y: -2590.1914, z: 318.3231}
     speed: 2
-    m_Value: {x: 722.9184, y: -2687.8384, z: 1748.2617}
+    m_Value: {x: 2906.566, y: -2590.1914, z: 318.3231}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -759,13 +759,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.50583744, y: -0.044092324, z: 0.026187368, w: 0.8613561}
+    m_Target: {x: 0.32207227, y: 0.6081391, z: -0.29493892, w: 0.6633276}
     speed: 2
-    m_Value: {x: 0.50569546, y: -0.045116153, z: 0.026788553, w: 0.8611149}
+    m_Value: {x: 0.32162872, y: 0.6087654, z: -0.2952431, w: 0.66241324}
   m_Size:
-    m_Target: 1556.3064
+    m_Target: 1662.0497
     speed: 2
-    m_Value: 1629.6401
+    m_Value: 1590.4781
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -827,9 +827,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 66610000
       m_LastClickedID: 0
-      m_ExpandedIDs: 14fbfffffe5a0000
+      m_ExpandedIDs: 80f9ffff14fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1103,7 +1103,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/prehub
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1111,16 +1111,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/prehub
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\vantan\MYGAME3DR\My project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 45.400024}
-    m_SelectedIDs: a05d0000
-    m_LastClickedID: 23968
-    m_ExpandedIDs: 00000000c85b000000ca9a3b
+    scrollPos: {x: 0, y: 105.400024}
+    m_SelectedIDs: b85d0000
+    m_LastClickedID: 23992
+    m_ExpandedIDs: 00000000e25b0000b05d00009a5f00009c5f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1148,7 +1148,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c85b0000
+    m_ExpandedIDs: 00000000e25b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
