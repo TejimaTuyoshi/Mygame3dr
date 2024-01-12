@@ -131,8 +131,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 9.988813, y: 5.922496, z: 0}
-  m_Center: {x: 0.0055891653, y: 2.9437528, z: 4.999998}
+  m_Size: {x: 9.988813, y: 5.922496, z: 2.3533173}
+  m_Center: {x: 0.0055891653, y: 2.9437528, z: 6.2110977}
 --- !u!65 &353901095664499450
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -152,8 +152,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.007043, y: 5.922496, z: 0}
-  m_Center: {x: -0.003524816, y: 2.9437528, z: -5.0300827}
+  m_Size: {x: 10.007043, y: 5.922496, z: 2.1633224}
+  m_Center: {x: -0.0035245798, y: 2.9437528, z: -6.111744}
 --- !u!65 &5220085489127291748
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -173,8 +173,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 5.922496, z: 3.5185833}
-  m_Center: {x: -4.9999843, y: 2.9437528, z: 3.2407064}
+  m_Size: {x: 2.1326873, y: 5.922496, z: 3.5185833}
+  m_Center: {x: -6.066325, y: 2.9437528, z: 3.2407064}
 --- !u!65 &1352478242990353539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -194,8 +194,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 5.922496, z: 3.5185833}
-  m_Center: {x: 4.935038, y: 2.9437528, z: 3.2407064}
+  m_Size: {x: 2.6799164, y: 5.922496, z: 3.5185833}
+  m_Center: {x: 6.405706, y: 2.9437528, z: 3.2407064}
 --- !u!65 &1445796076607928162
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -215,8 +215,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 5.922496, z: 3.34375}
-  m_Center: {x: -4.9999666, y: 2.9437528, z: -3.3753662}
+  m_Size: {x: 2.6751456, y: 5.922496, z: 3.34375}
+  m_Center: {x: -6.3375354, y: 2.9437528, z: -3.3753662}
 --- !u!65 &3319611960375592520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -236,5 +236,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0, y: 5.922496, z: 3.34375}
-  m_Center: {x: 4.914482, y: 2.9437528, z: -3.3753662}
+  m_Size: {x: 3.10778, y: 5.922496, z: 3.34375}
+  m_Center: {x: 6.5764136, y: 2.9437528, z: -3.3753662}
