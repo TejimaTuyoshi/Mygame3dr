@@ -22,11 +22,11 @@ public class Player : MonoBehaviour
     {
         if (Input.GetKeyDown("w"))
         {
-            transform.position += transform.TransformDirection(Vector3.forward) * 50f * Time.deltaTime;
+            transform.position += transform.TransformDirection(Vector3.forward) * 270f * Time.deltaTime;
         }
         if (Input.GetKeyDown("s"))
         {
-            transform.position += transform.TransformDirection(Vector3.back) * 50f * Time.deltaTime;
+            transform.position += transform.TransformDirection(Vector3.back) * 270f * Time.deltaTime;
         }
         if (Input.GetKeyDown("a"))
         {
