@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -10,6 +11,7 @@ public class Player : MonoBehaviour
     bool stop = false;
     Vector3 force = new Vector3(0.0f, 0.0f, 50.0f);    // 力を設定
     Vector3 back = new Vector3(0.0f, 0.0f, -50.0f);    // 力を設定
+    [SerializeField] GameObject Light;
     float cooltime = 0;
     // Start is called before the first frame update
     void Start()
@@ -66,6 +68,11 @@ public class Player : MonoBehaviour
         {
             transform.position = startposition;
             Debug.Log("テレポーター");
+        }
+        if (other.gameObject.CompareTag("Dark"))
+        {
+            Light.SetActive(true);
+            Debug.Log("暗闇");
         }
     }
 }
