@@ -1,8 +1,4 @@
-using System;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class Player : MonoBehaviour
 {
@@ -23,7 +19,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Debug.Log(cooltime);
-        if (Input.GetKeyDown("w")&& stop == false)
+        if (Input.GetKeyDown("w") && stop == false)
         {
             transform.position += transform.TransformDirection(Vector3.forward) * 270f * Time.deltaTime;
             stop = true;
@@ -73,6 +69,10 @@ public class Player : MonoBehaviour
         {
             Light.SetActive(true);
             Debug.Log("ˆÃˆÅ");
+        }
+        if (other.gameObject.CompareTag("restart"))
+        {
+            startposition = other.gameObject.transform.position;
         }
     }
 }
