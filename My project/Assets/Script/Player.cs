@@ -83,6 +83,11 @@ public class Player : MonoBehaviour
             LightOn = true;
             Debug.Log("à√à≈");
         }
+        if (other.gameObject.CompareTag("Light"))
+        {
+            LightOn = false;
+            Debug.Log("ñæÇÈÇ≥Ç™ñﬂÇ¡ÇΩÅI");
+        }
         if (other.gameObject.CompareTag("restart"))
         {
             startposition = other.gameObject.transform.position;
