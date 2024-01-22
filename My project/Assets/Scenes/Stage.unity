@@ -670,7 +670,7 @@ Transform:
   m_GameObject: {fileID: 349681772}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 840.51, y: 0.95, z: 260.07}
+  m_LocalPosition: {x: 840.51, y: 0.95, z: 332.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1190,9 +1190,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
-        m_MethodName: onstartbutton
+      - m_Target: {fileID: 1635720744}
+        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+        m_MethodName: Turned
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3112,7 +3112,7 @@ Transform:
   m_GameObject: {fileID: 1635720739}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 840.48, y: 0.45, z: 259.48}
+  m_LocalPosition: {x: 840.48, y: 0.45, z: 331.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3132,7 +3132,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7cce2e16b42bb640af79f8a27ce9449, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stop: 1
   Light: {fileID: 667928362}
+  Dark: {fileID: 1414686730}
+  notTurned: 1
+  LightOn: 0
 --- !u!54 &1635720745
 Rigidbody:
   m_ObjectHideFlags: 0

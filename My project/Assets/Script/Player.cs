@@ -4,10 +4,13 @@ public class Player : MonoBehaviour
 {
     Rigidbody rb;
     Vector3 startposition = new Vector3(840.48f, 0.45f, 259.48f);
-    bool stop = false;
+    public bool stop = false;
     Vector3 force = new Vector3(0.0f, 0.0f, 50.0f);    // 力を設定
     Vector3 back = new Vector3(0.0f, 0.0f, -50.0f);    // 力を設定
     [SerializeField] GameObject Light;
+    [SerializeField] GameObject Dark;
+    public bool notTurned = true;
+    public bool LightOn = false;
     float cooltime = 0;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +32,7 @@ public class Player : MonoBehaviour
             transform.position += transform.TransformDirection(Vector3.back) * 270f * Time.deltaTime;
             stop = true;
         }
-        if (Input.GetKeyDown("a") && stop == false)
+        if (Input.GetKeyDown("a") && stop == false && notTurned == false)
         {
             Transform myTransform = this.transform;
             // ローカル座標を基準に、回転を取得
@@ -38,7 +41,7 @@ public class Player : MonoBehaviour
             myTransform.localEulerAngles = localAngle; // 回転角度を設定
             stop = true;
         }
-        if (Input.GetKeyDown("d") && stop == false)
+        if (Input.GetKeyDown("d") && stop == false && notTurned == false)
         {
             Transform myTransform = this.transform;
             // ローカル座標を基準に、回転を取得
@@ -56,6 +59,16 @@ public class Player : MonoBehaviour
             cooltime = 0;
             stop = false;
         }
+        if (LightOn == true)
+        {
+            Light.gameObject.SetActive(true);
+            Dark.gameObject.SetActive(false);
+        }
+        else
+        {
+            Light.gameObject.SetActive(false);
+            Dark.gameObject.SetActive(true);
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -67,12 +80,17 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Dark"))
         {
-            Light.SetActive(true);
+            LightOn = true;
             Debug.Log("暗闇");
         }
         if (other.gameObject.CompareTag("restart"))
         {
             startposition = other.gameObject.transform.position;
         }
+    }
+
+    public void Turned()
+    {
+        notTurned = false;
     }
 }
