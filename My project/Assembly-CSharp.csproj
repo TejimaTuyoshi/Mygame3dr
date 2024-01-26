@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\FinishGame.cs" />
+    <Compile Include="Assets\Script\KeyAndDoor.cs" />
     <Compile Include="Assets\Script\StartPanel.cs" />
     <Compile Include="Assets\Script\Reroad.cs" />
     <Compile Include="Assets\Script\Player.cs" />

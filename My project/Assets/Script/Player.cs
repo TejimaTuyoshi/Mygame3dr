@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     Vector3 back = new Vector3(0.0f, 0.0f, -50.0f);    // 力を設定
     [SerializeField] GameObject Light;
     [SerializeField] GameObject Dark;
+    [SerializeField] GameObject GameOverPanel;
     public bool notTurned = true;
     public bool LightOn = false;
     float cooltime = 0;
@@ -75,8 +76,10 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Teleporter"))
         {
-            transform.position = startposition;
-            Debug.Log("テレポーター");
+            GameOverPanel.gameObject.SetActive(true);
+            stop = true;
+            notTurned = true;
+            Debug.Log("元テレポーター現ゲームオーバートリガー");
         }
         if (other.gameObject.CompareTag("Dark"))
         {
@@ -90,7 +93,12 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("restart"))
         {
-            startposition = other.gameObject.transform.position;
+            Debug.Log("もう使いません");
+        }
+        if (other.gameObject.CompareTag("Trap"))
+        {
+            other.gameObject.SetActive (false);
+            Debug.Log("罠を踏んだ！");
         }
     }
 
