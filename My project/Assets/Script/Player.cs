@@ -100,6 +100,11 @@ public class Player : MonoBehaviour
             other.gameObject.SetActive (false);
             Debug.Log("罠を踏んだ！");
         }
+        if (other.gameObject.CompareTag("Trap(swich)"))//テキストを後々変えられるようにします。
+        {
+            other.gameObject.SetActive(false);
+            Debug.Log("スイッチによって消えた！");
+        }
     }
 
     public void Turned()
