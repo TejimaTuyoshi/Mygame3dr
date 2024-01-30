@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -10,13 +11,18 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject Light;
     [SerializeField] GameObject Dark;
     [SerializeField] GameObject GameOverPanel;
+    [SerializeField] GameObject DemoClearPanel;
+    [SerializeField] Text Traptext;
     public bool notTurned = true;
     public bool LightOn = false;
     float cooltime = 0;
+    [SerializeField] AudioClip sound1;//落ちた時のサウンド
+    AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -97,13 +103,21 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Trap"))
         {
+            Traptext.text = "床の底が抜けた!";
             other.gameObject.SetActive (false);
+            audioSource.PlayOneShot(sound1);
             Debug.Log("罠を踏んだ！");
         }
         if (other.gameObject.CompareTag("Trap(swich)"))//テキストを後々変えられるようにします。
         {
+            Traptext.text = "床が消えるスイッチだ!";
             other.gameObject.SetActive(false);
+            audioSource.PlayOneShot(sound1);
             Debug.Log("スイッチによって消えた！");
+        }
+        if (other.gameObject.CompareTag("DemoClear"))
+        {
+            DemoClearPanel.gameObject.SetActive(true);
         }
     }
 
