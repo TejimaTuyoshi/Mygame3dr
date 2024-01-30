@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +7,7 @@ public class Player : MonoBehaviour
     Rigidbody rb;
     Vector3 startposition = new Vector3(840.48f, 0.45f, 259.48f);
     public bool stop = false;
+    public bool nomal = false;
     Vector3 force = new Vector3(0.0f, 0.0f, 50.0f);    // 力を設定
     Vector3 back = new Vector3(0.0f, 0.0f, -50.0f);    // 力を設定
     [SerializeField] GameObject Light;
@@ -13,16 +15,20 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject GameOverPanel;
     [SerializeField] GameObject DemoClearPanel;
     [SerializeField] Text Traptext;
+    [SerializeField] Text Gettext;
     public bool notTurned = true;
     public bool LightOn = false;
     float cooltime = 0;
+    float losttime = 0;
     [SerializeField] AudioClip sound1;//落ちた時のサウンド
     [SerializeField] AudioClip sound2;//開いたときのサウンド
     AudioSource audioSource;
+    Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -30,6 +36,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Debug.Log(cooltime);
+        Debug.Log(losttime);
         if (Input.GetKeyDown("w") && stop == false)
         {
             transform.position += transform.TransformDirection(Vector3.forward) * 270f * Time.deltaTime;
@@ -62,10 +69,24 @@ public class Player : MonoBehaviour
         {
             cooltime += Time.deltaTime;
         }
-        if (cooltime <= 0.1)
+        if (cooltime >= 0.1f)
         {
             cooltime = 0;
             stop = false;
+        }
+        if (nomal == true)
+        {
+            animator.SetBool("Fade", true);
+            losttime += Time.deltaTime;
+        }
+        else if (nomal == false)
+        {
+            losttime = 0;
+            animator.SetBool("Fade", false);
+        }
+        if (losttime >= 1.7f)
+        {
+            nomal = false;
         }
         if (LightOn == true)
         {
@@ -122,6 +143,7 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Key"))//テキストを後々変えられるようにします。
         {
+            nomal = true;
             audioSource.PlayOneShot(sound2);
         }
     }
