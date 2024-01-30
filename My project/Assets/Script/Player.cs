@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public bool LightOn = false;
     float cooltime = 0;
     [SerializeField] AudioClip sound1;//落ちた時のサウンド
+    [SerializeField] AudioClip sound2;//開いたときのサウンド
     AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -118,6 +119,10 @@ public class Player : MonoBehaviour
         if (other.gameObject.CompareTag("DemoClear"))
         {
             DemoClearPanel.gameObject.SetActive(true);
+        }
+        if (other.gameObject.CompareTag("Key"))//テキストを後々変えられるようにします。
+        {
+            audioSource.PlayOneShot(sound2);
         }
     }
 
