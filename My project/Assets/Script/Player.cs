@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     float losttime = 0;
     [SerializeField] AudioClip sound1;//落ちた時のサウンド
     [SerializeField] AudioClip sound2;//開いたときのサウンド
+    [SerializeField] AudioClip sound3;//歩いたときのサウンド
     AudioSource audioSource;
     [SerializeField]Animator animator;
     // Start is called before the first frame update
@@ -38,11 +39,13 @@ public class Player : MonoBehaviour
         Debug.Log(losttime);
         if (Input.GetKeyDown("w") && stop == false)
         {
+            audioSource.PlayOneShot(sound3);
             transform.position += transform.TransformDirection(Vector3.forward) * 270f * Time.deltaTime;
             stop = true;
         }
         if (Input.GetKeyDown("s") && stop == false)
         {
+            audioSource.PlayOneShot(sound3);
             transform.position += transform.TransformDirection(Vector3.back) * 270f * Time.deltaTime;
             stop = true;
         }
