@@ -1,12 +1,10 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     Rigidbody rb;
-    Vector3 startposition = new Vector3(840.48f, 0.45f, 259.48f);
     public bool stop = false;
     public bool nomal = false;
     Vector3 force = new Vector3(0.0f, 0.0f, 50.0f);    // 力を設定
@@ -18,11 +16,10 @@ public class Player : MonoBehaviour
     [SerializeField] Text Traptext;
     [SerializeField] Text Gettext;
     [SerializeField] Text TextCount;
-    public float CountTime = 0;
+    float CountTime = 0;
     public bool notTurned = true;
     public bool LightOn = false;
     bool nottrap = true;
-    float cooltime = 0;
     float losttime = 0;
     [SerializeField] AudioClip sound1;//落ちた時のサウンド
     [SerializeField] AudioClip sound2;//開いたときのサウンド
