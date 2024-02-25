@@ -40,19 +40,16 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CountTime += Time.deltaTime;
         TextCount.text = String.Format("Time: {0:00.00}", CountTime);// カウントダウンタイムを整形して表示
         if (Input.GetKeyDown("w") && stop == false)
         {
             audioSource.PlayOneShot(sound3);
             transform.position += transform.TransformDirection(Vector3.forward) * 810f * Time.deltaTime;
-            stop = true;
         }
         if (Input.GetKeyDown("s") && stop == false)
         {
             audioSource.PlayOneShot(sound3);
             transform.position += transform.TransformDirection(Vector3.back) * 810f * Time.deltaTime;
-            stop = true;
         }
         if (Input.GetKeyDown("a") && stop == false && notTurned == false)
         {
@@ -61,7 +58,6 @@ public class Player : MonoBehaviour
             Vector3 localAngle = myTransform.localEulerAngles;
             localAngle.y -= 90.0f; // ローカル座標を基準に、y軸を軸にした回転を10度に変更
             myTransform.localEulerAngles = localAngle; // 回転角度を設定
-            stop = true;
         }
         if (Input.GetKeyDown("d") && stop == false && notTurned == false)
         {
@@ -70,16 +66,14 @@ public class Player : MonoBehaviour
             Vector3 localAngle = myTransform.localEulerAngles;
             localAngle.y += 90.0f; // ローカル座標を基準に、y軸を軸にした回転を10度に変更
             myTransform.localEulerAngles = localAngle; // 回転角度を設定
-            stop = true;
+        }
+        if (stop == false)
+        {
+            CountTime += Time.deltaTime;
         }
         if (stop == true)
         {
-            cooltime += Time.deltaTime;
-        }
-        if (cooltime >= 0.1f)
-        {
-            cooltime = 0;
-            stop = false;
+            TextCount.text = "notime";
         }
         if (nomal == true)
         {
@@ -115,7 +109,6 @@ public class Player : MonoBehaviour
             stop = true;
             notTurned = true;
             Debug.Log("元テレポーター現ゲームオーバートリガー");
-            TextCount.text = "notime";
             if (nottrap)
             {
                 Traptext.text = "見えない壁をすり抜けた...";
@@ -157,7 +150,6 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("DemoClear"))
         {
-            CountTime += 0;
             DemoClearPanel.gameObject.SetActive(true);
         }
         if (other.gameObject.CompareTag("Key"))
