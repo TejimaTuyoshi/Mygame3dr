@@ -3614,8 +3614,9 @@ GameObject:
   - component: {fileID: 902367694}
   - component: {fileID: 902367698}
   - component: {fileID: 902367697}
-  - component: {fileID: 902367696}
   - component: {fileID: 902367695}
+  - component: {fileID: 902367696}
+  - component: {fileID: 902367699}
   m_Layer: 5
   m_Name: TitleButton
   m_TagString: Untagged
@@ -3699,9 +3700,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 902367695}
-        m_TargetAssemblyTypeName: Reroad, Assembly-CSharp
-        m_MethodName: Button
+      - m_Target: {fileID: 902367699}
+        m_TargetAssemblyTypeName: Reload, Assembly-CSharp
+        m_MethodName: Title
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3761,6 +3762,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 902367693}
   m_CullTransparentMesh: 1
+--- !u!114 &902367699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902367693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c509e323a7ec5e4e8dde8addebc0e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &912060123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4184,7 +4197,7 @@ GameObject:
   - component: {fileID: 1112531123}
   - component: {fileID: 1112531122}
   - component: {fileID: 1112531121}
-  - component: {fileID: 1112531120}
+  - component: {fileID: 1112531124}
   m_Layer: 5
   m_Name: TitleButton
   m_TagString: Untagged
@@ -4212,18 +4225,6 @@ RectTransform:
   m_AnchoredPosition: {x: 414, y: -440}
   m_SizeDelta: {x: 857.8329, y: 400.8908}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1112531120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112531118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bc2cd0bdb3788d429a0fdc981017cf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1112531121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4268,9 +4269,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1112531120}
-        m_TargetAssemblyTypeName: Reroad, Assembly-CSharp
-        m_MethodName: Button
+      - m_Target: {fileID: 1112531124}
+        m_TargetAssemblyTypeName: Reload, Assembly-CSharp
+        m_MethodName: Title
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4330,6 +4331,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1112531118}
   m_CullTransparentMesh: 1
+--- !u!114 &1112531124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112531118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c509e323a7ec5e4e8dde8addebc0e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1147058854 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7660755359519629727, guid: f03cb2963b1329a4a80faa499ee4b646, type: 3}
@@ -5392,7 +5405,7 @@ GameObject:
   - component: {fileID: 1509225065}
   - component: {fileID: 1509225064}
   - component: {fileID: 1509225063}
-  - component: {fileID: 1509225062}
+  - component: {fileID: 1509225066}
   m_Layer: 5
   m_Name: TitleButton
   m_TagString: Untagged
@@ -5420,18 +5433,6 @@ RectTransform:
   m_AnchoredPosition: {x: -6, y: -147}
   m_SizeDelta: {x: 857.8329, y: 400.8908}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1509225062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1509225060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bc2cd0bdb3788d429a0fdc981017cf1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1509225063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5476,9 +5477,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1509225062}
-        m_TargetAssemblyTypeName: Reroad, Assembly-CSharp
-        m_MethodName: Button
+      - m_Target: {fileID: 1509225066}
+        m_TargetAssemblyTypeName: Reload, Assembly-CSharp
+        m_MethodName: Title
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5538,6 +5539,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1509225060}
   m_CullTransparentMesh: 1
+--- !u!114 &1509225066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509225060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c509e323a7ec5e4e8dde8addebc0e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1518164862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5934,7 +5947,6 @@ MonoBehaviour:
   Traptext: {fileID: 565185210}
   Gettext: {fileID: 454362169}
   TextCount: {fileID: 1725938506}
-  CountTime: 0
   notTurned: 1
   LightOn: 0
   sound1: {fileID: 8300000, guid: d5ded313125b72545a7b23882164edf3, type: 3}

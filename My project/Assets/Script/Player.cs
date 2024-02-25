@@ -7,8 +7,6 @@ public class Player : MonoBehaviour
     Rigidbody rb;
     public bool stop = false;
     public bool nomal = false;
-    Vector3 force = new Vector3(0.0f, 0.0f, 50.0f);    // —Í‚ğİ’è
-    Vector3 back = new Vector3(0.0f, 0.0f, -50.0f);    // —Í‚ğİ’è
     [SerializeField] GameObject Light;
     [SerializeField] GameObject Dark;
     [SerializeField] GameObject GameOverPanel;
