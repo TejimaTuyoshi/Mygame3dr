@@ -115,6 +115,7 @@ public class Player : MonoBehaviour
             stop = true;
             notTurned = true;
             Debug.Log("元テレポーター現ゲームオーバートリガー");
+            TextCount.text = "notime";
             if (nottrap)
             {
                 Traptext.text = "見えない壁をすり抜けた...";
