@@ -1,3 +1,4 @@
+using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +17,8 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject DemoClearPanel;
     [SerializeField] Text Traptext;
     [SerializeField] Text Gettext;
+    [SerializeField] Text TextCount;
+    public float CountTime = 0;
     public bool notTurned = true;
     public bool LightOn = false;
     bool nottrap = true;
@@ -37,6 +40,8 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CountTime += Time.deltaTime;
+        TextCount.text = String.Format("Time: {0:00.00}", CountTime);// カウントダウンタイムを整形して表示
         if (Input.GetKeyDown("w") && stop == false)
         {
             audioSource.PlayOneShot(sound3);
@@ -151,6 +156,7 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("DemoClear"))
         {
+            CountTime += 0;
             DemoClearPanel.gameObject.SetActive(true);
         }
         if (other.gameObject.CompareTag("Key"))

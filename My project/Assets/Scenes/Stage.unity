@@ -5933,6 +5933,8 @@ MonoBehaviour:
   DemoClearPanel: {fileID: 1861347064}
   Traptext: {fileID: 565185210}
   Gettext: {fileID: 454362169}
+  TextCount: {fileID: 1725938506}
+  CountTime: 0
   notTurned: 1
   LightOn: 0
   sound1: {fileID: 8300000, guid: d5ded313125b72545a7b23882164edf3, type: 3}
@@ -6203,7 +6205,7 @@ GameObject:
   - component: {fileID: 1725938507}
   - component: {fileID: 1725938506}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
