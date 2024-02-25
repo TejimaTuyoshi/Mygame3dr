@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     [SerializeField] Text Gettext;
     public bool notTurned = true;
     public bool LightOn = false;
+    bool nottrap = true;
     float cooltime = 0;
     float losttime = 0;
     [SerializeField] AudioClip sound1;//落ちた時のサウンド
@@ -109,6 +110,10 @@ public class Player : MonoBehaviour
             stop = true;
             notTurned = true;
             Debug.Log("元テレポーター現ゲームオーバートリガー");
+            if (nottrap)
+            {
+                Traptext.text = "見えない壁をすり抜けた...";
+            }
         }
         if (other.gameObject.CompareTag("Dark"))
         {
@@ -122,6 +127,7 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Trap"))
         {
+            nottrap = false;
             Traptext.text = "床の底が抜けた!";
             other.gameObject.SetActive (false);
             audioSource.PlayOneShot(sound1);
@@ -129,6 +135,7 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Trap(swich)"))
         {
+            nottrap = false;
             Traptext.text = "床が消えるスイッチだ!";
             other.gameObject.SetActive(false);
             audioSource.PlayOneShot(sound1);
@@ -136,6 +143,7 @@ public class Player : MonoBehaviour
         }
         if (other.gameObject.CompareTag("Trap(move)"))
         {
+            nottrap = false;
             Traptext.text = "動く障害物に当たってしまった...";
             other.gameObject.SetActive(false);
             audioSource.PlayOneShot(sound1);
