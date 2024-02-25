@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip sound1;//落ちた時のサウンド
     [SerializeField] AudioClip sound2;//開いたときのサウンド
     [SerializeField] AudioClip sound3;//歩いたときのサウンド
+    [SerializeField] AudioClip sound4;//ぶつかった時のサウンド
     AudioSource audioSource;
     [SerializeField]Animator animator;
     // Start is called before the first frame update
@@ -119,10 +120,6 @@ public class Player : MonoBehaviour
             LightOn = false;
             Debug.Log("明るさが戻った！");
         }
-        if (other.gameObject.CompareTag("restart"))
-        {
-            Debug.Log("もう使いません");
-        }
         if (other.gameObject.CompareTag("Trap"))
         {
             Traptext.text = "床の底が抜けた!";
@@ -130,12 +127,19 @@ public class Player : MonoBehaviour
             audioSource.PlayOneShot(sound1);
             Debug.Log("罠を踏んだ！");
         }
-        if (other.gameObject.CompareTag("Trap(swich)"))//テキストを後々変えられるようにします。
+        if (other.gameObject.CompareTag("Trap(swich)"))
         {
             Traptext.text = "床が消えるスイッチだ!";
             other.gameObject.SetActive(false);
             audioSource.PlayOneShot(sound1);
             Debug.Log("スイッチによって消えた！");
+        }
+        if (other.gameObject.CompareTag("Trap(move)"))
+        {
+            Traptext.text = "動く障害物に当たってしまった...";
+            other.gameObject.SetActive(false);
+            audioSource.PlayOneShot(sound1);
+            Debug.Log("振り子にぶつかった...");
         }
         if (other.gameObject.CompareTag("DemoClear"))
         {
