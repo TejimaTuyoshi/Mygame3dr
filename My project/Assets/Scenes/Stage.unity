@@ -5952,7 +5952,7 @@ MonoBehaviour:
   sound1: {fileID: 8300000, guid: d5ded313125b72545a7b23882164edf3, type: 3}
   sound2: {fileID: 8300000, guid: 4a2b186800e83a04a9d6426cd1b914e3, type: 3}
   sound3: {fileID: 8300000, guid: 626b3b14940f1b245b8a7f13ad26066a, type: 3}
-  sound4: {fileID: 0}
+  sound4: {fileID: 8300000, guid: a1756066bbdf65a4984cf446074a6066, type: 3}
   animator: {fileID: 454362171}
 --- !u!54 &1635720745
 Rigidbody:
