@@ -35,8 +35,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(cooltime);
-        Debug.Log(losttime);
         if (Input.GetKeyDown("w") && stop == false)
         {
             audioSource.PlayOneShot(sound3);

@@ -7468,7 +7468,7 @@ PrefabInstance:
     - target: {fileID: 432052675951271695, guid: b51f7eeff92ccd146a00defb634681a3, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 1913112063}
+      objectReference: {fileID: 867540808}
     - target: {fileID: 7439378431780924634, guid: b51f7eeff92ccd146a00defb634681a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2699.53
@@ -7920,6 +7920,10 @@ PrefabInstance:
     - target: {fileID: 8760343378781012783, guid: b51f7eeff92ccd146a00defb634681a3, type: 3}
       propertyPath: m_Name
       value: Key (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760343378781012783, guid: b51f7eeff92ccd146a00defb634681a3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
