@@ -40,13 +40,13 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown("w") && stop == false)
         {
             audioSource.PlayOneShot(sound3);
-            transform.position += transform.TransformDirection(Vector3.forward) * 270f * Time.deltaTime;
+            transform.position += transform.TransformDirection(Vector3.forward) * 810f * Time.deltaTime;
             stop = true;
         }
         if (Input.GetKeyDown("s") && stop == false)
         {
             audioSource.PlayOneShot(sound3);
-            transform.position += transform.TransformDirection(Vector3.back) * 270f * Time.deltaTime;
+            transform.position += transform.TransformDirection(Vector3.back) * 810f * Time.deltaTime;
             stop = true;
         }
         if (Input.GetKeyDown("a") && stop == false && notTurned == false)
