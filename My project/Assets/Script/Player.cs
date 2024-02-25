@@ -153,7 +153,7 @@ public class Player : MonoBehaviour
         {
             DemoClearPanel.gameObject.SetActive(true);
         }
-        if (other.gameObject.CompareTag("Key"))//テキストを後々変えられるようにします。
+        if (other.gameObject.CompareTag("Key"))
         {
             nomal = true;
             audioSource.PlayOneShot(sound2);
